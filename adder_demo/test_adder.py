@@ -5,10 +5,13 @@
 # Simple tests for an adder module
 import cocotb
 from cocotb.triggers import Timer
-from adder_model import adder_model
 import random
 import vsc
 from cocotb_coverage.coverage import *
+
+def adder_model(a: int, b: int) -> int:
+    """ model of adder """
+    return a + b
 
 @vsc.covergroup
 class adder_covergroup(object):
