@@ -10,8 +10,8 @@
 $ git clone https://gitlab.com/shaktiproject/cores/c-class.git
 $ cd c-class/
 $ pip install -r requirements.txt
-$ repomanager --yaml $PWD/test_soc/deps.yaml --verbose debug --clean
-$ repomanager --yaml $PWD/test_soc/deps.yaml --verbose debug -cup
+$ repomanager --yaml $PWD/test_soc/c64_c32/c64_deps.yaml --verbose debug --clean
+$ repomanager --yaml $PWD/test_soc/c64_c32/c64_deps.yaml --verbose debug -cup
 $ soc_config -ispec sample_config/c64/rv64i_isa.yaml   -customspec sample_config/c64/rv64i_custom.yaml   -cspec sample_config/c64/core64.yaml   -gspec sample_config/c64/csr_grouping64.yaml   -dspec sample_config/c64/rv64i_debug.yaml   --verbose debug
 $ export XXD_VERSION=2023
 $ make  generate_verilog
